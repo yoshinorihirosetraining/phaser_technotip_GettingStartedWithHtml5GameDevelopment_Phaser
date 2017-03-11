@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="javascripts/library/phaser.js">
+</script>
+</head>
+<body>
+<div id="gameContainer"></div>
+
+<script type="text/javascript">
+
+var game = new Phaser.Game(window.innerWidth, window.innerHeight,
+	Phaser.AUTO, 'gameContainer',
+	{preload: preload, create: create, update: update});
+
+function preload() {
+	game.load.image('logo', '/images/logo.png');
+}
+
+function create() {
+	game.add.sprite(10, 20, 'logo');
+	game.stage.backgroundColor = '#ffffff';
+}
+
+function update() {
+
+}
+
+</script>
+</body>
+</html>
